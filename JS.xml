@@ -1,0 +1,211 @@
+<templateSet group="JS">
+  <template name="afn" value="function($PARAM$) {&#10;  $END$&#10;}" description="Inserts anonymous function expression" toReformat="true" toShortenFQNames="true">
+    <variable name="PARAM" expression="" defaultValue="&quot;param&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="cer" value="console.error($END$);" description="Console error" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="clg" value="console.log($END$);" description="Console log" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="cls" value="(function() {&#10;    $END$&#10;})();" description="Inserts closure" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="ctor" value="var $CLASS$ = function($PARAM$) {&#10;    $END$&#10;};" description="Inserts constructor expression" toReformat="true" toShortenFQNames="true">
+    <variable name="CLASS" expression="" defaultValue="&quot;class&quot;" alwaysStopAt="true" />
+    <variable name="PARAM" expression="" defaultValue="&quot;param&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="cwn" value="console.warn($END$);" description="Console warn" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="dready" value="$(document).ready(function(){&#10;    $END$&#10;});&#10;" description="Inserts document ready" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="fn" value="function $NAME$($PARAM$) {&#10;  $END$&#10;}" description="Inserts function expression" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true" />
+    <variable name="PARAM" expression="" defaultValue="&quot;param&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="if" value="if ($COND$) {&#10;    $END$&#10;}" description="Inserts if expression" toReformat="true" toShortenFQNames="true">
+    <variable name="COND" expression="" defaultValue="&quot;cond&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="ifel" value="if ($COND$) {&#10;    $END$&#10;} else {&#10;    &#10;}" description="Inserts if else" toReformat="true" toShortenFQNames="true">
+    <variable name="COND" expression="" defaultValue="&quot;cond&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="itar" value="for (var $INDEX$ = 0; $INDEX$ &lt; $ARRAY$.length; $INDEX$++) {&#10;  var $VAR$ = $ARRAY$[$INDEX$];&#10;  $END$&#10;}" description="Iterate elements of array" toReformat="true" toShortenFQNames="true">
+    <variable name="INDEX" expression="jsSuggestIndexName()" defaultValue="&quot;i&quot;" alwaysStopAt="true" />
+    <variable name="ARRAY" expression="jsArrayVariable()" defaultValue="&quot;array&quot;" alwaysStopAt="true" />
+    <variable name="VAR" expression="jsSuggestVariableName()" defaultValue="&quot;o&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="iter" value="for each (var $VAR$ in $ARRAY$) {&#10;  $END$&#10;}" description="Iterate (for each..in) - JavaScript 1.6+" toReformat="true" toShortenFQNames="true">
+    <variable name="ARRAY" expression="jsArrayVariable()" defaultValue="&quot;array &quot;" alwaysStopAt="true" />
+    <variable name="VAR" expression="jsSuggestVariableName()" defaultValue="&quot;o&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="itin" value="for (var $VAR$ in $ARRAY$) {&#10;  $END$&#10;}" description="Iterate (for..in)" toReformat="true" toShortenFQNames="true">
+    <variable name="ARRAY" expression="jsArrayVariable()" defaultValue="&quot;array &quot;" alwaysStopAt="true" />
+    <variable name="VAR" expression="jsSuggestVariableName()" defaultValue="&quot;o&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="me" value="module.exports = function() {&#10;    $END$&#10;};" description="Inserts module exports" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="mod" value="$APP$.$MODULE$ = (function($, _, $APP$) {&#10;&#9;var def = function() {&#10;&#9;&#9;this.$els = {&#10;&#9;&#9;&#9;// elements&#10;&#9;&#9;};&#10;&#9;&#9;this.states = {&#10;&#9;&#9;&#9;// states&#10;&#9;&#9;};&#10;&#9;&#9;init.call(this);&#10;&#9;};&#10;&#10;&#9;var init = function() {&#10;&#9;&#9;this.bind();&#10;&#9;};&#10;&#10;&#9;def.prototype = {&#10;&#9;&#9;bind : function() {&#10;&#9;&#9;&#9;// interactions&#10;&#9;&#9;}&#10;&#9;&#9;// all other public functionality below here as methods&#10;&#9;};&#10;&#10;&#9;return def;&#10;})(jQuery, _, $APP$);" description="Inserts module pattern" toReformat="true" toShortenFQNames="true">
+    <variable name="APP" expression="" defaultValue="&quot;app&quot;" alwaysStopAt="true" />
+    <variable name="MODULE" expression="" defaultValue="&quot;module&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="o" value="{&#10;  $KEY$: $VALUE$&#10;}" description="Inserts object" toReformat="false" toShortenFQNames="true">
+    <variable name="KEY" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="o:" value="$KEY$: $VALUE$" description="Inserts object key: value" toReformat="false" toShortenFQNames="true">
+    <variable name="KEY" expression="" defaultValue="key" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="value" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="ofn" value="$FUNC$: function($PARAM$) {&#10;  $END$&#10;}" description="Inserts anonymous function expression as object value" toReformat="true" toShortenFQNames="true">
+    <variable name="FUNC" expression="" defaultValue="&quot;func&quot;" alwaysStopAt="true" />
+    <variable name="PARAM" expression="" defaultValue="&quot;param&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="p" value="$PROP$: $VAL$,&#10;$END$" description="Inserts property" toReformat="true" toShortenFQNames="true">
+    <variable name="PROP" expression="" defaultValue="&quot;prop&quot;" alwaysStopAt="true" />
+    <variable name="VAL" expression="" defaultValue="&quot;val&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="pro" value="$OBJ$.prototype.$FN$ = function($PARAMS$) {&#10;    $END$&#10;};" description="Inserts prototype expression" toReformat="true" toShortenFQNames="true">
+    <variable name="OBJ" expression="" defaultValue="&quot;class&quot;" alwaysStopAt="true" />
+    <variable name="FN" expression="" defaultValue="&quot;fn&quot;" alwaysStopAt="true" />
+    <variable name="PARAMS" expression="" defaultValue="&quot;params&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="ritar" value="for (var $INDEX$ = $ARRAY$.length - 1; $INDEX$ &gt;= 0; $INDEX$--) {&#10;  var $VAR$ = $ARRAY$[$INDEX$];&#10;  $END$&#10;}" description="Iterate elements of array in reverse order" toReformat="true" toShortenFQNames="true">
+    <variable name="INDEX" expression="jsSuggestIndexName()" defaultValue="&quot;i&quot;" alwaysStopAt="true" />
+    <variable name="ARRAY" expression="jsArrayVariable()" defaultValue="&quot;array&quot;" alwaysStopAt="true" />
+    <variable name="VAR" expression="jsSuggestVariableName()" defaultValue="&quot;o&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="t" value="this.$PROP$;&#10;$END$" description="Inserts this expression" toReformat="true" toShortenFQNames="true">
+    <variable name="PROP" expression="" defaultValue="&quot;prop&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="ter" value="$COND$ ? $EXPR$ : $END$;" description="Inserts ternary operator expression" toReformat="true" toShortenFQNames="true">
+    <variable name="COND" expression="" defaultValue="&quot;cond&quot;" alwaysStopAt="true" />
+    <variable name="EXPR" expression="" defaultValue="&quot;expr&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="us" value="'use strict';&#10;$END$" description="Inserts 'use strict' statement" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+    </context>
+  </template>
+</templateSet>
